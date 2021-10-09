@@ -4,13 +4,13 @@ Phishing para Facebook Ubuntu, Kali linux, Debian
 
 Depende de:
 
--PHP
+- PHP
 
--GNOME-TERMINAL
+- GNOME-TERMINAL
 
--PYTHON 3
+- PYTHON 3
 
--NGROK CONFIGURADO
+- NGROK CONFIGURADO
 
 
 INSTALAR:
