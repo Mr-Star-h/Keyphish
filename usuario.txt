@@ -1,0 +1,3 @@
+var insertotexto=""+ 
+"Anonimo <br>";
+document.write(insertotexto);
