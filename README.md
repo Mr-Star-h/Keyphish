@@ -9,4 +9,6 @@ INSTALAR:
 
 - python install.py
 
-- python Keyphish.py
+USO:
+
+- python ~/Keyphish/Keyphish.py
