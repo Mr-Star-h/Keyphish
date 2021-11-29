@@ -63,3 +63,4 @@ elif y==3:
     clearConsole()
 elif y==4:
     print("  HASTA PRONTO!!")
+    clearConsole()
